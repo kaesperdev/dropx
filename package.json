@@ -1,6 +1,6 @@
 {
   "name": "dropx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DropX is a simple file sharing and url shortening solution",
   "main": "server.js",
   "type": "module",

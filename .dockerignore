@@ -1,0 +1,25 @@
+# Logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# Git files
+.gitignore
+.git
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Dependencies
+node_modules/
+
+# Local development folders
+uploads/
+
+# Enviroment
+.env*
+
+# Misc
+.DS_Store
