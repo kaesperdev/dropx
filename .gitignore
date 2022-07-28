@@ -1,0 +1,17 @@
+# Logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Local project folders
+uploads/
+
+# Enviroment
+.env*
+
+# Misc
+.DS_Store

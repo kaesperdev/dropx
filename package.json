@@ -1,0 +1,26 @@
+{
+  "name": "dropx",
+  "version": "1.0.0",
+  "description": "DropX is a simple file sharing and url shortening solution",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./src/server.js"
+  },
+  "repository": "https://github.com/fvnnydev/dropx",
+  "author": "fvnnydev <mail@fvnny.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/autoload": "^5.1.0",
+    "fastify": "^4.3.0",
+    "fastify-multer": "^2.0.3",
+    "mongoose": "^6.5.0",
+    "nanoid": "^4.0.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
