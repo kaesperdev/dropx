@@ -1,4 +1,4 @@
-uploadsPath = process.env.UPLOADS_PATH || 'uploads'
+const uploadsPath = process.env.UPLOADS_PATH || 'uploads'
 
 import { existsSync, mkdirSync } from 'fs';
 
