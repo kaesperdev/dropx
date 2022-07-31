@@ -19,6 +19,9 @@ node_modules/
 uploads/
 /docker-compose.yml
 
+# Examples
+/examples
+
 # Enviroment
 /.env*
 
