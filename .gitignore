@@ -11,7 +11,7 @@ node_modules/
 uploads/
 
 # Enviroment
-.env*
+/.env*
 
 # Misc
 .DS_Store
