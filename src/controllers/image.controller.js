@@ -1,6 +1,7 @@
 import { writeFileSync } from 'fs';
 
 import genNewUploadId from '../utils/generateNewUploadId.js';
+import checkUploadSize from '../utils/sizeLimiter.js';
 import UploadsModel from '../models/Uploads.js';
 
 const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -11,6 +12,13 @@ const newImage = async (req, res) => {
       statusCode: 400,
       error: 'Invalid file type',
       message: 'Only JPEG, PNG, and GIF files are allowed',
+    });
+
+  if (!checkUploadSize(req.headers['content-length'], 'image'))
+    return res.code(400).send({
+      statusCode: 400,
+      error: 'Image too large',
+      message: `Image must be less than ${process.env.MAX_IMAGE_SIZE} in size`,
     });
 
   const newUploadId = genNewUploadId();
