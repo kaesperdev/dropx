@@ -15,7 +15,13 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-mongoose.connect(process.env.MONGODB_URI);
+await mongoose.connect(process.env.MONGODB_URI)
+.then(() => {
+  console.log('Successfully connected to MongoDB!')
+}).catch(err => {
+  console.log('Connection to MongoDB failed!\n', err)
+  process.exit(1);
+})
 
 const fastify = Fastify({
   logger: {
