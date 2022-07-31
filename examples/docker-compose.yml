@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dropx:
+    container_name: dropx
+    image: fvnnydev/dropx:latest
+    restart: unless-stopped
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3001
+      - DOMAIN=http://localhost:3001
+      - MONGODB_URI=mongodb://127.0.0.1:27017/dropx?retryWrites=true&w=majority
+      - REDIRECT=https://example.com
+      - UPLOADS_PATH=uploads # optional, defaults to "uploads"
+      - MAX_IMAGE_SIZE=20MB # optional
+      - MAX_PASTE_SIZE=0.5MB # optional
+    ports:
+      - 3001:3001

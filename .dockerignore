@@ -15,11 +15,12 @@ docker-compose.yml
 # Dependencies
 node_modules/
 
-# Local development folders
+# Local development files
 uploads/
+/docker-compose.yml
 
 # Enviroment
-.env*
+/.env*
 
 # Misc
 .DS_Store

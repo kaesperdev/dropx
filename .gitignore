@@ -7,8 +7,9 @@ npm-debug.log*
 # Dependencies
 node_modules/
 
-# Local project folders
+# Local development files
 uploads/
+/docker-compose.yml
 
 # Enviroment
 /.env*
