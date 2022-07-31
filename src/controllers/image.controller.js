@@ -1,3 +1,5 @@
+const uploadsPath = process.env.UPLOADS_PATH || 'uploads'
+
 import { writeFileSync } from 'fs';
 
 import genNewUploadId from '../utils/generateNewUploadId.js';
@@ -26,7 +28,7 @@ const newImage = async (req, res) => {
 
   try {
     writeFileSync(
-      `${process.env.UPLOADS_PATH}/${newUploadId}.${fileExtension}`,
+      `${uploadsPath}/${newUploadId}.${fileExtension}`,
       req.file.buffer
     );
     await UploadsModel.create({

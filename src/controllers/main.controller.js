@@ -1,3 +1,5 @@
+const uploadsPath = process.env.UPLOADS_PATH || 'uploads'
+
 import { readFileSync } from 'fs';
 
 import UploadsModel from '../models/Uploads.js';
@@ -23,7 +25,7 @@ const getResource = async (req, res) => {
       return res
         .code(200)
         .send(
-          readFileSync(`${process.env.UPLOADS_PATH}/${id}.${upload.extension}`)
+          readFileSync(`${uploadsPath}/${id}.${upload.extension}`)
         );
     } else if (upload.type === 'paste') {
       res.header('Content-Type', 'text/plain');
